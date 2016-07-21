@@ -10,6 +10,7 @@ require.config({
 });
  
 require(['jquery','moment','math'], function($,moment,math) {
+    
     // alert($().jquery);
     var date =  moment(new Date()).format('YYYY-MM-DD');
     var sum = math.add(3,5);
