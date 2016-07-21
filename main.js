@@ -16,14 +16,16 @@ require.config({
     paths: {
         jquery: 'jquery-1.7.2',
         moment: 'node_modules/moment/moment',
-        math: 'math'
+        math: 'math',
+        underscore: 'node_modules/underscore/underscore',
+        
     }
 });
  
-require(['jquery','moment','math'], function($,moment,math) {
-
+require(['jquery','moment','math','underscore'], function($,moment,math,_) {
     // alert($().jquery);
     var date =  moment(new Date()).format('YYYY-MM-DD');
     var sum = math.add(3,5);
-    $('body').append(date).append('<p>'+sum+'</p>');
+    var ary =[1,2,3];
+    $('body').append(date).append('<p>'+sum+'</p>').append('<p>'+_.map(ary, function(num){ return num * 3; })+'</p>');
 });
