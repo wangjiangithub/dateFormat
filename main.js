@@ -26,6 +26,6 @@ require(['jquery','moment','math','underscore'], function($,moment,math,_) {
     // alert($().jquery);
     var date =  moment(new Date()).format('YYYY-MM-DD');
     var sum = math.add(3,5);
-    var ary =[1,2,3];
-    $('body').append(date).append('<p>'+sum+'</p>').append('<p>'+_.map(ary, function(num){ return num * 3; })+'</p>');
+    var ary =_.map([1,2,3], function(num){ return num * 3; });
+    $('body').append(date).append('<p>'+sum+'</p>').append('<p>'+ary+'</p>');
 });
